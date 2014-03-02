@@ -31,9 +31,9 @@ h1,h2,h3,h4,h5,h6 {
     padding: 9px 6px 4px;
     line-height: 0;
     position: absolute;
-    top: 50%;
+    top: 1rem;
     margin-top: -0.6875rem;
-    right: 0.25rem;
+    right: .75rem;
     color: #333333;
     opacity: 0.3; }
 

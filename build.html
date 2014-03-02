@@ -12,6 +12,16 @@
 		<script src="js/vendor/modernizr.js"></script>
     </head>
     <body id="fantasytcg-app">
+		<div class="row" style="margin-top: 20px !important">
+			<div class="medium-12 columns">
+				<div data-alert class="alert-box success radius" id="success-alert" style="display:none">
+					Card Added to your Deck!
+				</div>
+				<div data-alert class="alert-box error radius" id="error-alert" style="display:none">
+					Deck is Full!!
+				</div>
+			</div>
+		</div>
 		<div class="row" style="margin-top: 20px !important;">
 			<div class="medium-3 columns">
 				<div style="height: 100%; overflow: auto">
@@ -30,7 +40,7 @@
 			</div>
 		</div>
 		<script type="text/template" id="base-deck-view">
-			<a class="player small secondary expand no-bottom-margin button" data-player-id="<%- id %>" href="#"><%- firstName %> <%- lastName %></a>
+			<a class="player tiny expand no-bottom-margin button" data-player-id="<%- id %>" href="#"><%- firstName %> <%- lastName %></a>
 		</script>
 		<script type="text/template" id="card-view">
 			<h2><%- firstName %> <%- lastName %> <i class="bb-<%- team %>"></i></h2>

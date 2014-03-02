@@ -1,0 +1,44 @@
+.card {
+	background-color: white;
+	position: relative;
+	height: 15em;
+	display:block;
+}
+
+.card-content {
+	border: 1px solid #A8A8A8;
+	padding: 3em 1.5em 1.5em;
+	cursor: pointer;
+	-webkit-box-shadow: 0 0 10px 2px #A8A8A8;
+	box-shadow: 0 0 10px 2px #A8A8A8;
+}
+
+.card.switch {
+  -webkit-animation: switch 250 ease-in;
+  -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.365, 1.455);
+}
+
+.card.discard {
+  -webkit-animation: discard 500 ease-in;
+  -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.365, 1.455);
+}
+
+@-webkit-keyframes switch {
+  0% {
+    -webkit-transform: scale(0.75, 0.75);
+    opacity: 0;
+  }
+
+  100% {
+    -webkit-transform: scale(1, 1);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes discard {  
+
+  100% {
+    -webkit-transform: scale(0.75, 0.75);
+    opacity: 0;
+  }
+}

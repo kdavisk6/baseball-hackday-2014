@@ -74,7 +74,7 @@ $(function(){
 		model: Card,
 		
 		/* save the deck to local storage */
-		localStorage: new Backbone.LocalStorage('baseball-hackday-decks'),
+		localStorage: new Backbone.LocalStorage('baseball-hackday-personal-decks'),
 		
 		pitchers: function() {
 			return this.where({ position: 'SP' });
@@ -295,7 +295,8 @@ $(function(){
 		el: $('#fantasytcg-app'),
 		
 		events: {
-			'click a.player' : 'viewPlayerDetails'
+			'click a.player' : 'viewPlayerDetails',
+			'click button.add' : 'addToPlayerDeck'
 		},
 	
 		initialize: function() {
@@ -365,6 +366,28 @@ $(function(){
 				var detailView = new CardDetailView({ model: player[0] });
 				this.$('#card-details').empty();
 				this.$('#card-details').append(detailView.render().el);
+			}
+		},
+		
+		addToPlayerDeck: function(e) {
+			var id = $(e.currentTarget).attr('data-player-id');
+			var player = this.baseDeck.where({ id: id });
+			if (typeof player !== 'undefined') {
+				/* add this model to the player deck */
+				this.playerDeck.create({
+					id: player[0].attributes.id,
+					firstName: player[0].attributes.firstName,
+					lastName: player[0].attributes.lastName,
+					nickName: player[0].attributes.nickName,
+					team: player[0].attributes.team,
+					position: player[0].attributes.position,
+					stats: {
+						hitting: player[0].attributes.hitting,
+						running: player[0].attributes.running,
+						pitching: player[0].attributes.pitching
+					},
+					overall: player[0].attributes.overall
+				});
 			}
 		}
 	});

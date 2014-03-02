@@ -1,46 +1,30 @@
-<!doctype html>
-<html class="no-js" lang="en">
+<html>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PAGE</title>
-    <link rel="stylesheet" href="css/foundation.css" />
+        <meta name="generator"
+        content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
+        <title></title>
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/foundation.css">
+		<link rel="stylesheet" href="css/styles.css" />
     <script src="js/vendor/modernizr.js"></script>
   </head>
-  <body>
-   
+    <body id="fantasytcg-app">
   <div class="row" style="margin-top: 150px !important;">
 		  <div class="large-6 columns">
 			<div class="panel radius" style="height:350px;">
-			 <a style="height:300px; vertical-align: middle;line-height:300px" href="#" class="button expand">GENERATE YOUR DECK</a>
+					<a style="height:300px; vertical-align: middle;line-height:300px" href="/generate.html" class="button expand">GENERATE YOUR DECK</a>
 			</div>
 		  </div>
 		  <div class="large-6 columns">
 			<div class="panel radius" style="height:350px">
-			   <a style="height:300px; vertical-align: middle;line-height:300px" href="#" class="button expand">BUILD YOUR DECK</a>
-				
+					<a style="height:300px; vertical-align: middle;line-height:300px" href="/build.html" class="button expand">BUILD YOUR DECK</a>				
 			</div>
 		  </div>
 </div>
-<div class="row" id="fantasytcg-app">
-	<ul id="base-deck">
-	
-	</ul>
-</div>
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script type="text/javascript" src="js/foundation.min.js"></script>
-    <script type="text/javascript" src="js/underscore.min.js"></script>
-	<script type="text/javascript" src="js/backbone.min.js"></script>
-	<script type="text/javascript" src="js/backbone.localStorage.min.js"></script>
-	<script type="text/javascript" src="js/fantasytcg.app.js"></script>
     <script>
       $(document).foundation();
     </script>
-	<script type="text/template" id="base-deck-view">
-		<div class="simple-card">
-			<p><%- firstName %> <%- lastName %></p>
-		</div>
-	</script>
-	
   </body>
 </html>

@@ -3,7 +3,7 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 h1,h2,h3,h4,h5,h6 {
-  font-family: 'Revalia', cursive;
+  font-family: 'Revalia', sans-serif;
 }
 
 /* gobal layout */
@@ -16,7 +16,6 @@ h1,h2,h3,h4,h5,h6 {
 .choose-player {
   background-color: #f3f3f3;
 }
-
 
 /*  */
 .card {

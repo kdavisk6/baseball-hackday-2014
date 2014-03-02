@@ -110,6 +110,18 @@ $(function(){
 		
 		/* set our template from the ui */
 		template: _.template($('#card-template').html()),
+		
+		/* tag events */
+		events: {
+			'click a.close'  : 'discard'		
+		},
+		
+		/* view initialization, watch the change and remove events on the model */
+		initialize: function() {
+			this.listenTo(this.model, 'change', this.render);
+			this.listenTo(this.model, 'destroy', this.hide);
+			this.listenTo(this.model, 'remove', this.discard);
+		},
 
 		/* render function, updates the card display */
 		render: function() {

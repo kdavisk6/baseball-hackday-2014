@@ -335,16 +335,17 @@ $(function(){
 			
 			this.listenTo(this.playerDeck, 'add', function(card) {
 				/* build up a new PlayerDeckStats */
-				var playerDeckStats = new PlayerDeckStats();
-				
-				/* get the position counts */
-				playerDeckStats.pitchers = this.playerDeck.pitchers().length;
-				playerDeckStats.catchers = this.playerDeck.catchers().length;
-				playerDeckStats.infielders = 
-					this.playerDeck.firstBasemen().length + this.playerDeck.secondBasemen().length + 
+				var playerDeckStats = new PlayerDeckStats({
+					pitchers : this.playerDeck.pitchers().length,
+					infielders : function() {
+						return this.playerDeck.firstBasemen().length + this.playerDeck.secondBasemen().length + 
 					this.playerDeck.shortStops().length + this.playerDeck.thirdBasemen().length + 
 					this.playerDeck.designatedHitters().length;
-				playerDeckStats.outfielders = this.playerDeck.outfielders().length;
+					}, 
+					catchers: this.playerDeck.catchers().length,
+					outfielders: this.playerDeck.outfielders().length,
+					overall: this.playerDeck.length
+				});
 				
 				/* create a new player deck view */
 				var view = new PlayerDeckStatsView({ model: playerDeckStats });
@@ -370,6 +371,10 @@ $(function(){
 		},
 		
 		addToPlayerDeck: function(e) {
+			if ( this.playerDeck.complete() ) {
+				$('#error-alert').fadeIn('fast');
+				$('button.add').hide();
+			} else {
 			var id = $(e.currentTarget).attr('data-player-id');
 			var player = this.baseDeck.where({ id: id });
 			if (typeof player !== 'undefined') {
@@ -388,6 +393,13 @@ $(function(){
 					},
 					overall: player[0].attributes.overall
 				});
+					
+					$('#success-alert').fadeIn('fast');
+					setTimeout(function() {
+						$('#success-alert').fadeOut();
+					}, 1500);
+					
+				}
 			}
 		}
 	});

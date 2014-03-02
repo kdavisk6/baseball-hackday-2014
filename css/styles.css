@@ -3,7 +3,7 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 h1,h2,h3,h4,h5,h6 {
-  font-family: 'Playball', cursive;
+  font-family: 'Revalia', cursive;
 }
 
 /* build */
@@ -11,9 +11,6 @@ h1,h2,h3,h4,h5,h6 {
   background-color: #f3f3f3;
 }
 
-.choose-playe a:hover {
-  background-color: #ddd;
-}
 
 /*  */
 .card {

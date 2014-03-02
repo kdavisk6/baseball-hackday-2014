@@ -87,7 +87,7 @@ $(function(){
 		model: Card,
 		
 		/* url to read the XML from */
-		url: '/data/players.xml',
+		url: 'data/players.xml',
 		
 		/* override the parse function to parse XML instead of JSON */
 		parse: function (data) {
@@ -267,7 +267,7 @@ $(function(){
 			
 			this.listenTo(this.baseDeck, 'sync', function(items, resp, options) {
 				$.ajax({
-					url: '/data/rosters.xml',
+					url: 'data/rosters.xml',
 					dataType: 'xml',
 					method: 'get',
 					async: 'false',

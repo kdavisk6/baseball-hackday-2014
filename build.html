@@ -26,12 +26,13 @@
 			<div class="medium-3 columns">
 				<div style="height: 100%; overflow: auto">
 				<ul id="base-deck" class="side-nav choose-player">
+					<li id="base-deck-loading"><i class="fa fa-spinner fa-spin"></i> Loading...</li>
 				</ul>
 				</div>
 			</div>
 			<div class="medium-6 columns">
 				<div id="card-details">
-				
+					<blockquote>Select a player from left column</blockquote>
 				</div>
 			</div>
 			<div class="medium-3 columns">
@@ -39,14 +40,30 @@
 				</div>
 			</div>
 		</div>
+
+
+		<footer>
+			<div class="row">
+				<div class="medium-6 medium-centered columns text-center">  
+					<a href="index.html">Home</a> | <a href="build.html">Build</a> | <a href="inspect.html">Your deck</a><br>
+					See the project on <a href="https://github.com/kdavisk6/baseball-hackday-2014"><i class="fa fa-github"></i> github</a>. <br>
+					Built by Kevin Davis, Daigo Fujiwara, Ismail Ozyigit and Fred Lalande, March 2, 2014 as part of <a href="http://www.baseballhackday.com/">Boston Baseball Hack Day</a>
+				</div>
+			</div>
+		</footer>
+
+
 		<script type="text/template" id="base-deck-view">
 			<a class="player small secondary expand no-bottom-margin button" data-player-id="<%- id %>" href="#"><i class="bb-<%- team %>"></i> <%- firstName %> <%- lastName %></a>
 		</script>
 		<script type="text/template" id="card-view">
 			<h2><i class="bb-<%- team %>"></i> <%- firstName %> <%- lastName %> </h2>
-			<ul class="info">
+			<ul class="info no-bullet">
 				<li>Position: <%- position %></li>
 				<li>Team: <%- team %></li>
+				<li>BATTING: <i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></li>
+				<li>RUNNING: <i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></li>
+				<li>PITCHIG: <i class="fa fa-star-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></li>
 			</ul>
 			<ul class="stats">
 			

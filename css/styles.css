@@ -22,6 +22,11 @@ h1,h2,h3,h4,h5,h6 {
   margin-bottom: 0;
 }
 
+footer {
+  font-size: .8em;
+  line-height: 1.5;
+}
+
 /* build */
 .choose-player {
   background-color: #f3f3f3;
@@ -31,10 +36,8 @@ h1,h2,h3,h4,h5,h6 {
 .card {
 	background-color: white;
 	position: relative;
-	height: 15em;
 	display:block;
 }
-
 /* close button */
 .card .close {
     font-size: 1.375rem;

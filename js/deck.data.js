@@ -23,7 +23,7 @@ $(function(){
 							stolen: 0,
 							pct: 0
 						},
-						overall: 0					
+						overall: 0
 					},
 					pitching: {
 						era: 0,
@@ -191,7 +191,7 @@ $(function(){
 						running: runningStats
 					}
 				});
-			});		
+			});
 			return cards;
 		},
 		
@@ -257,7 +257,7 @@ $(function(){
 			/* update the element html to match the model json */
 			this.$el.html(this.template(this.model.toJSON()));
 			return this;
-		},		
+		},
 		
 		/* remove the card */
 		discard: function() {
@@ -268,7 +268,7 @@ $(function(){
 			this.$el.addClass('discard');
 			setTimeout( $.proxy(function() {
 				this.$el.removeClass('discard');
-				this.$el.remove();				
+				this.$el.remove();
 			}, this), 500);
 		}
 	});
@@ -314,13 +314,13 @@ $(function(){
 						$.each(items.models, function(i,v) {
 							var position = '';
 							$playerProfile = $(data).find('player[id=' + v.id + ']');
-							if (typeof $playerProfile.attr('primary_position') !== 'undefined') {						
+							if (typeof $playerProfile.attr('primary_position') !== 'undefined') {
 								position = $playerProfile.attr('primary_position');
 							} else {
 								position = $playerProfile.attr('position');
 							}
 							this.set({position: position});
-						});					
+						});
 					}
 				});
 			});
@@ -328,9 +328,10 @@ $(function(){
 			this.listenTo(this.baseDeck, 'add', function(card) {
 				/* create a new card view and add to the screen */
 				var view = new BaseDeckView({ model: card });
-				
+				/* remove loading */
+				$('#base-deck-loading').hide();
 				/* append it */
-				this.$('#base-deck').append( view.render().el );	
+				this.$('#base-deck').append( view.render().el );
 			});
 			
 			this.listenTo(this.playerDeck, 'add', function(card) {

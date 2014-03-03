@@ -4,7 +4,7 @@
         content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
         <title></title>
         <link href='http://fonts.googleapis.com/css?family=Revalia|Open+Sans:400italic,700italic,400,700' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="http://daigofuji.github.io/bbclub-font/css/bbclub-font.css"> 
+        <link rel="stylesheet" href="css/bbclub-font.css"> 
         <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 		<link rel="stylesheet" href="css/normalize.css">
 		<link rel="stylesheet" href="css/foundation.css">
@@ -13,17 +13,30 @@
   </head>
     <body id="fantasytcg-app">
   <div class="row" style="margin-top: 150px !important;">
-		  <div class="large-6 columns">
-			<div class="panel radius" style="height:350px;">
-					<a style="height:300px; vertical-align: middle;line-height:300px" id="generate" href="#" class="button expand">GENERATE YOUR DECK</a>
+		  <div class="medium-6 columns">
+			<div class="panel radius huge" >
+					<a id="generate" href="#" class="button expand radius card-choice">GENERATE YOUR DECK</a>
 			</div>
 		  </div>
-		  <div class="large-6 columns">
-			<div class="panel radius" style="height:350px">
-					<a style="height:300px; vertical-align: middle;line-height:300px" href="build.html" class="button expand">BUILD YOUR DECK</a>				
+		  <div class="medium-6 columns">
+			<div class="panel radius huge" >
+					<a href="build.html" class="button expand radius card-choice">BUILD YOUR DECK</a>				
 			</div>
 		  </div>
 </div>
+
+
+		<footer>
+			<div class="row">
+				<div class="medium-6 medium-centered columns text-center">  
+					<a href="index.html">Home</a> | <a href="build.html">Build</a> | <a href="inspect.html">Your deck</a><br>
+					See the project on <a href="https://github.com/kdavisk6/baseball-hackday-2014"><i class="fa fa-github"></i> github</a>. <br>
+					Built by Kevin Davis, Daigo Fujiwara, Ismail Ozyigit and Fred Lalande, March 2, 2014 as part of <a href="http://www.baseballhackday.com/">Boston Baseball Hack Day</a>
+				</div>
+			</div>
+		</footer>
+
+
 		<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script type="text/javascript" src="js/foundation.min.js"></script>
 		<script type="text/javascript" src="js/underscore.min.js"></script>

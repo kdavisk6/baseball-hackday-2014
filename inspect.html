@@ -19,9 +19,22 @@
 				</ul>
 			</div>
 		</div>
+
+
+		<footer>
+			<div class="row">
+				<div class="medium-6 medium-centered columns text-center">  
+					<a href="index.html">Home</a> | <a href="build.html">Build</a> | <a href="inspect.html">Your deck</a><br>
+					See the project on <a href="https://github.com/kdavisk6/baseball-hackday-2014"><i class="fa fa-github"></i> github</a>. <br>
+					Built by Kevin Davis, Daigo Fujiwara, Ismail Ozyigit and Fred Lalande, March 2, 2014 as part of <a href="http://www.baseballhackday.com/">Boston Baseball Hack Day</a>
+				</div>
+			</div>
+		</footer>
+
 		<script type="text/template" id="card-template">
 			<div class="card-content">
-				<h2><i class="bb-<%- team %>"></i> <%- firstName %> <%- lastName %></h2>
+				<h3><i class="bb-<%- team %> bb-4x"></i><br/><%- firstName %><br/><%- lastName %></h3>
+
 				<a class="close" href="#">&times;</a>
 			</div>
 		</script>
